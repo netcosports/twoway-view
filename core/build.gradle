@@ -9,14 +9,14 @@ dependencies {
 }
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion '21.0.1'
+    compileSdkVersion Integer.parseInt(project.ANDROID_BUILD_SDK_VERSION)
+    buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
     resourcePrefix 'twowayview_'
 
     defaultConfig {
         minSdkVersion 10
-        targetSdkVersion 21
+        targetSdkVersion Integer.parseInt(project.ANDROID_BUILD_TARGET_SDK_VERSION)
     }
 }
 
-apply from: "${rootDir}/gradle/scripts/gradle-mvn-push.gradle"
+//apply from: "${rootDir}/gradle/scripts/gradle-mvn-push.gradle"
